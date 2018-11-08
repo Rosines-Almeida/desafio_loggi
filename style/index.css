@@ -63,6 +63,12 @@ map{
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
+}
+
+.icon-sign-out {
+  font-size: 30px;
+  color: #29b8ff;
+  margin-top: auto;
 }
 
