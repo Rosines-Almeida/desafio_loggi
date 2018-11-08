@@ -1,6 +1,6 @@
 .menu-home {
   width: 500px;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,7 +14,7 @@
 .numbers-section hr {
   color: grey;
   height: 2px;
-  width: 80vw;
+  width: 60%;
 }
 
 .numbers-section {
@@ -24,7 +24,7 @@
 hr {
   color: grey;
   height: 2px;
-  width: 100vw;
+  width: 80%;
 }
 
 .btn-fav {
