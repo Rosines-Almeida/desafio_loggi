@@ -11,3 +11,33 @@
   align-items: center;
   z-index: 100;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-rows:  400px 200px ;
+ grid-template-columns: 0.3fr 1.5fr 2fr  ;
+ grid-template-areas:  
+                       "aside content map  "
+                       "aside content map" ;
+ grid-gap: 10px;
+ }
+
+  aside {
+    background-color: yellow;
+    grid-area: aside;
+  
+    
+  }
+  
+  main {
+    background-color: blue;
+    grid-area: content;
+   
+  }
+  
+  map{
+    background-color: blue;
+    grid-area: map;
+  
+  }
+   
