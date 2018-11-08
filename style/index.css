@@ -11,3 +11,13 @@
   align-items: center;
   z-index: 100;
 }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery {
+  height: 10vh;
+  font-size: 20px;
+}

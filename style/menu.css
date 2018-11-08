@@ -1,0 +1,32 @@
+.menu-home {
+  width: 500px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.menu-title {
+  font-size: 30px;
+}
+
+.numbers-section hr {
+  color: grey;
+  height: 2px;
+  width: 80vw;
+}
+
+.numbers-section {
+  font-size: 20px;
+}
+
+hr {
+  color: grey;
+  height: 2px;
+  width: 100vw;
+}
+
+.btn-fav {
+  width: 50px;
+}
