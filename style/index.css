@@ -21,6 +21,10 @@
   font-size: 20px;
 }
 
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows:  400px 200px ;
