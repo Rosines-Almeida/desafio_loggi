@@ -61,14 +61,14 @@ map{
   font-size: 30px;
   color: #29b8ff;
 }
-
-a {
-  text-decoration: none;
-}
+ 
+a:link 
+{ 
+text-decoration:none; 
+} 
 
 .icon-sign-out {
   font-size: 30px;
   color: #29b8ff;
   margin-top: auto;
 }
-
