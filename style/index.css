@@ -55,22 +55,14 @@ map{
   grid-area: map;
 
 }
-  
-<<<<<<< HEAD
-  }
-   
-  .icon{
-    color: black;
-    font-size: 30px;
-    color: #29b8ff;
-  }
 
-  a {
-    text-decoration:none;
-  }
-=======
 .icon{
+  color: black;
   font-size: 30px;
   color: #29b8ff;
 }
->>>>>>> d6cfb461b4925e3092a80c94f98812b981a0bdb5
+
+a {
+  text-decoration:none;
+}
+
