@@ -4,33 +4,104 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Loggi</title>
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link href = "https://file.myfontastic.com/YDkD6NTx8oseVinSE6UHLL/icons.css" rel = "stylesheet">
     <link href="https://file.myfontastic.com/TL7SPECgWqKUURXn2NDXqK/icons.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-      <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            <img src="/ " width="30" height="30" alt="">
-          </a>
-        </nav>
-        <div class="wrapper">
-           
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/ " width="30" height="30" alt="">
+      </a>
+    </nav>
+    <div class="wrapper">
+             
 
-<aside>C</aside>
-        <aside> </aside>
-        <main> </main>
-        <map></map>
-    <h1 class="splash"><img src="assets/loggi-logo.jpg" style="height:300px;"></h1>
+    <!-- <h1 class="splash"><img src="assets/loggi-logo.jpg" style="height:300px;"></h1> -->
 
-    <!-- bootstratp -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+    <aside>
+      <h2>Menu</h2>
+      <div class ='d flex flex-column justify-content-center'>
+        <div> <a href='' class=" justify-content-center m-3 icon icon-home-house-streamline"> </a> </div>
+        <div> <a href=''  class="m-3 icon icon-star"></a></div> 
+      <div>   <a href='' class="m-3 icon icon-info"></a> </div> 
+      </div>
+      <div class ='d-flex align-items-end flex-column bd-highlight mb-3'>
+      <div class='mt-auto p-2 bd-highlight'>Sair </div>
+      </div>
+      
+    
+    </aside>
+   
+    <main>
+
+      <div class="menu-home ml-5">
+        <div class="dropdown">
+          <p class="menu-title">Procure Mensageiros</p>
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cidade
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">São Paulo</a>
+            <a class="dropdown-item" href="#">Rio de Janeiro</a>
+            <a class="dropdown-item" href="#">Curitiba</a>
+            <a class="dropdown-item" href="#">Porto Alegre</a>
+            <a class="dropdown-item" href="#">Brasília</a>
+            <a class="dropdown-item" href="#">São José dos Campos</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Zona
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Zona Central</a>
+            <a class="dropdown-item" href="#">Zona Norte</a>
+            <a class="dropdown-item" href="#">Zona Leste</a>
+            <a class="dropdown-item" href="#">Zona Sul</a>
+            <a class="dropdown-item" href="#">Zona Oeste</a>
+          </div>
+        </div>
+        <button class="btn btn-outline-primary btn-fav" type="button"><i class="icon-star"></i></button>
+        <hr />
+        <div class="numbers-section">
+          <div class="total-section font-weight-light">
+            <p>Total</p>
+            <p class="total-number"></p>
+          </div>
+          <hr />
+          <div class="available-section font-weight-light">
+            <p>Disponíveis</p>
+            <p class="available-number"></p>
+          </div>
+          <div class="unavailable-section font-weight-light">
+            <p>Indisponíveis</p>
+            <p class="unavailable-number"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery">
+        <button class="ml-5 font-weight-light btn btn-outline-primary">Novo Pedido</button>
+      </div>
+
+    </main>
+
+
+    <map></map>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <script src="apikey.js"></script>
+=======
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+>>>>>>> f7d27ca5fcb67e0e686a4ee722e3f12b4a0f8002
     <script src="js/index.js"></script>
   </body>
 </html>

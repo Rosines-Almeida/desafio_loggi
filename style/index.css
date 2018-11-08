@@ -12,32 +12,44 @@
   z-index: 100;
 }
 
+.navbar {
+  border-bottom: 1px solid rgb(202, 201, 201);
+}
+
+.delivery {
+  height: 10vh;
+  font-size: 20px;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows:  400px 200px ;
- grid-template-columns: 0.3fr 1.5fr 2fr  ;
- grid-template-areas:  
-                       "aside content map  "
-                       "aside content map" ;
- grid-gap: 10px;
+  grid-template-columns: 0.3fr 1.5fr 2fr  ;
+  grid-template-areas:  
+                        "aside content map  "
+                        "aside content map" ;
+  grid-gap: 10px;
  }
 
   aside {
-    background-color: yellow;
     grid-area: aside;
-  
-    
   }
   
   main {
-    background-color: blue;
+    border-left: 1px solid rgb(202, 201, 201);
+    border-right: 1px solid rgb(202, 201, 201);
     grid-area: content;
    
   }
   
   map{
-    background-color: blue;
+    background-color: 1px solid gray;
     grid-area: map;
   
   }
    
+  .icon{
+    color: black;
+    font-size: 30px;
+    color: #29b8ff;
+  }
