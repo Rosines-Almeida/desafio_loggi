@@ -21,6 +21,10 @@
   font-size: 20px;
 }
 
+.btn-delivery {
+  width: 300px;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows:  400px 200px ;
