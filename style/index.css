@@ -56,10 +56,14 @@ map{
 
 }
  
-
+.icon-sign-out {
+  font-size: 30px;
+  color: #29b8ff;
+  margin-top: auto;
+}
  
 .icon{
-  color: black;
+  color: #000000;
   font-size: 30px;
   color: #29b8ff;
 }
