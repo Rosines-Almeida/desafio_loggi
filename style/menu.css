@@ -9,12 +9,17 @@
 
 .menu-title {
   font-size: 30px;
+  color: #29b8ff;
+}
+
+.dropdown-toggle {
+  width: 300px;
 }
 
 .numbers-section hr {
   color: grey;
   height: 2px;
-  width: 60%;
+  width: 70%;
 }
 
 .numbers-section {
