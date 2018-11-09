@@ -38,7 +38,7 @@ $(document).ready(function(){
 			newFavsReg = [ reg ];
 		}
 		// let favObj = [ {favCity: getCity, reg: getReg} ]
-		
+
 		let favObj = [ {city: newFavsCity, newFavsReg} ];
 		console.log(favObj)
 		// newFavObj = [favObj];
@@ -74,9 +74,9 @@ $(document).ready(function(){
 function getMessengerLocations() {
 	let city = $('#city').find(":selected").text();
 
-	if ($('#city').val('sp') && !$('#region').val('nenhuma')) {
+	if ($('#city').text() && !$('#region').text()) {
 		for (zone in SPzones) {
-			if (zone === $('#region').val()) {
+			if (zone === $('#region').text()) {
 				let center = {lat: zone.lat, lng: zone.lng}
 				requestAPIandRunMap(center)
 			}
