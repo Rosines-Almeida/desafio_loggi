@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('<script></script>').attr('src', `https://maps.googleapis.com/maps/api/js?key=${googleKey}&libraries=visualization&callback=initMap`)
+
 	// $('.splash').delay('2000').fadeOut('slow');
 	
 	$(".btn-fav").click(function() {
