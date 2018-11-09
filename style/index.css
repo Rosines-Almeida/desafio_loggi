@@ -76,10 +76,10 @@ map{
  
 .btn-map{
   position: relative;
-  border-radius: 20px !important;
+  border-radius: 5px !important;
   background-color: white !important;
-  color: #17a2b8;
-  border: 1px solid #17a2b8;
+  color: #29b8ff;
+  border: 1px solid #29b8ff;
   
 }
 
