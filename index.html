@@ -81,19 +81,35 @@
         </div>
 
         <div class="delivery ml-5">
-          <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery">Novo Pedido</button>
+          <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery" data-toggle='modal' data-target='#modalPedido'">Novo Pedido</button>
         </div>
 
       </main>
-
-    </div>
-
+      <div class="modal" tabindex="-1" role="dialog" id="modalPedido">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header color-one">
+                 <h5 class="modal-title"> </h5>
+                 <img src=" " width="40px">
+              </div>
+              <div class="modal-body">
+                 <p id='descricao'> </p>
+              </div>
+              <div class="modal-footer">
+                 <button type="button color-two" class="btn color-two" data-dismiss="modal"> <i class="fas fa-times"></i></button>
+              </div>
+           </div>
+        </div>
+     </div> 
 
     <map></map>
+  </div>
+   
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
     <script src="apikey.js"></script>
     <script src="js/index.js"></script>
   </body>
