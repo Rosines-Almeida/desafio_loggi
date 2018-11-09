@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$('<script></script>').attr('src', `https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFO9LIL-H7SvL8XI52rtIgc34H9JN1Kg&libraries=visualization&callback=initMap`)
 
-	// $('.splash').delay('2000').fadeOut('slow');
+	$('.splash').delay('2000').fadeOut('slow');
 	
 	$(".btn-fav").click(function() {
 		let getCity = JSON.parse(localStorage.getItem("city"));
