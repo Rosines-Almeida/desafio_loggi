@@ -44,40 +44,54 @@ $(document).ready(function(){
 
 	$('#city').val('sp');
 	$('#city').change(getMessengerLocations);
+	$('#region').change(getMessengerLocations);
 	
 });
 
 
 function getMessengerLocations() {
 	let city = $('#city').find(":selected").text();
-  
-  // Get coordinates of selected city
-  // let city = 'Rio de Janeiro';
-  let cityCoordinates = allCities.filter(item => item.name === city);  
-  let center = {lat: cityCoordinates[0]['coordinates'][0], lng: cityCoordinates[0]['coordinates'][1]};
 
-	let queryDrivers = `
-			{
-			closestDrivers(productType: 0, transportType: "1", lat:${center.lat}, lng:${center.lng}, radius: 12.0, limit: 500) {
-				driversCount
-				readyDriversCount
-				busyDriversCount
-				drivers {
-					 lng
-					lat
-					busy
-				}
+	if ($('#city').val('sp') && !$('#region').val('nenhuma')) {
+		for (zone in SPzones) {
+			if (zone === $('#region').val()) {
+				let center = {lat: zone.lat, lng: zone.lng}
+				requestAPIandRunMap(center)
 			}
-		} 
-		`;
+		}
+	} else {
+		let cityCoordinates = allCities.filter(item => item.name === city);  
+		let center = {lat: cityCoordinates[0]['coordinates'][0], lng: cityCoordinates[0]['coordinates'][1]};
+		requestAPIandRunMap(center)
+	}
 
-	requestLoggiAPI(queryDrivers)
-	.then(response => response.json())
-	.then(data => {
-		let messengerLocations = data['data']['closestDrivers']['drivers'].filter(item => item.busy === false)
-		// console.log(messengerLocations);
-		return initMap(messengerLocations, center.lat, center.lng, data)
-	});
+	
+	function requestAPIandRunMap(center) {
+	
+		let queryDrivers = `
+				{
+				closestDrivers(productType: 0, transportType: "1", lat:${center.lat}, lng:${center.lng}, radius: 12.0, limit: 500) {
+					driversCount
+					readyDriversCount
+					busyDriversCount
+					drivers {
+						lng
+						lat
+						busy
+					}
+				}
+			} 
+			`;
+
+		requestLoggiAPI(queryDrivers)
+		.then(response => response.json())
+		.then(data => {
+			let messengerLocations = data['data']['closestDrivers']['drivers'].filter(item => item.busy === false)
+			// console.log(messengerLocations);
+			return initMap(messengerLocations, center.lat, center.lng, data)
+		});
+
+	}
 }
 
 function requestLoggiAPI(query) {
