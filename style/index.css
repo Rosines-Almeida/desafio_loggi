@@ -32,11 +32,11 @@ body{
 .wrapper {
   display: grid;
   grid-template-rows:  400px 200px ;
-  grid-template-columns: 0.3fr 1.5fr 2fr  ;
+  grid-template-columns: 0.2fr 1.5fr 2fr  ;
   grid-template-areas:  
                         "aside content map  "
                         "aside content map" ;
-  grid-gap: 10px;
+  grid-gap: 0px;
  }
 
 aside {
@@ -49,9 +49,11 @@ main {
   grid-area: content;
   
 }
-
+.color-map{
+  background-color: #e4e4e4;
+}
 map{
-  background-color: 1px solid gray;
+  background-color: 1px solid e4e4e4;
   grid-area: map;
 
 }
@@ -70,4 +72,17 @@ map{
  
 .color-one{
   background-color: #29b8ff; 
+}
+ 
+.btn-map{
+  position: relative;
+  border-radius: 20px !important;
+  background-color: white !important;
+  color: #17a2b8;
+  border: 1px solid #17a2b8;
+  
+}
+
+a{
+  text-decoration: underline;
 }

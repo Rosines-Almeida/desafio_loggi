@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('<script></script>').attr('src', `https://maps.googleapis.com/maps/api/js?key=${googleKey}&libraries=visualization&callback=initMap`)
+
 	// $('.splash').delay('2000').fadeOut('slow');
 	
 	$(".btn-fav").click(function() {
@@ -9,7 +11,7 @@ $(document).ready(function(){
 		let reg = $("#region option:selected").text();
 		console.log(city);
 		console.log(reg);
-		let favObj = [ {city: getCity, reg: getReg} ]
+		// let favObj = [ {city: getCity, reg: getReg} ]
 		
 		if (getCity) {
 			let indexCity = getCity.findIndex( value => value === city );
@@ -35,7 +37,8 @@ $(document).ready(function(){
 		} else {
 			newFavsReg = [ reg ];
 		}
-		newFavObj = [favObj]
+		let favObj = [ {city: newFavsCity, reg: newFavsReg} ];
+		newFavObj = [favObj];
 		localStorage.setItem("city", JSON.stringify(newFavsCity));
 		localStorage.setItem("region", JSON.stringify(newFavsReg));
 
