@@ -26,10 +26,10 @@
   <!--   <h1 class="splash"><img src="assets/loggi-logo.jpg" style="height:300px;"></h1> -->
 
       <aside class =  'd-flex flex-column align-content-around'> 
-        <a href='' class=" m-3  icon icon-home-house-streamline"> </a> 
-        <a href=''  class="m-3 icon icon-star"></a> 
-        <a href='' class=" m-3 icon icon-info"></a>  
-        <a href='' class="ml-auto p-2 bd-highlight icon-sign-out"></a> 
+        <a href='' class=" m-3  icon icon-home-house-streamline" style="text-decoration: none" > </a> 
+        <a href=''  class="m-3 icon icon-star"style="text-decoration: none"></a> 
+        <a href='' class=" m-3 icon icon-info" style="text-decoration: none"></a>  
+        <a href='' class="ml-auto mr-4 bd-highlight icon-sign-out"style="text-decoration: none"></a> 
       </aside>
    
       <main>
@@ -80,14 +80,18 @@
         <div class="modal" tabindex="-1" role="dialog" id="modalPedido">
           <div class="modal-dialog" role="document">
              <div class="modal-content">
-                <div class="modal-header color-one">
-                   <h5 class="modal-title"> </h5>
-                   <img src=" " width="40px">
+                <div class="modal-header  ">
+              
+                   <img src="assets/loggi-logo-small.png" width="50px" height="30px">
+                   <button type="button" class="btn" data-dismiss="modal"> <i class="icon-cancel-circled"></i> </button>
                 </div>
-                <div class="modal-body">
+                <div>
+               
+                    </div>
+                <div class="modal-body d-flex justify-content-center">
                    <p id='descricao'> Faça seu login <a href = 'https://www.loggi.com/corp/app/'> aqui</a> </p>
-                
-                   <button type="button  " class="btn" data-dismiss="modal"> <i class="icon-cancel-circled"></i> </button>
+             
+                  
              </div>
              </div>
           </div>
@@ -96,10 +100,12 @@
       </main>
 
     <map class ='grid' >
-      <div id="floating-panel">
-        <button onclick="toggleHeatmap()">Habilitar/Desabilitar Mapa de Calor</button>
-        <button onclick="changeGradient()">Alterar gradiente</button>
-        <button onclick="changeOpacity()">Alterar opacidade</button>
+      <div id="floating-panel" class='color-map'>
+        <div class='d-flex justify-content-around'>
+          <button onclick="toggleHeatmap()" type="button" class="btn-map  ">Habilitar/Desabilitar Mapa de Calor</button>
+          <button onclick="changeGradient()" type="button" class="btn-map  ">Alterar gradiente</button> 
+          <button onclick="changeOpacity()" type="button" class="btn-map  ">Alterar opacidade</button>
+        </div>
       </div>
       <div id="map" style="width: 100%; height: 100%"></div>
     </map>
