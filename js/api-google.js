@@ -2,36 +2,28 @@
 // let city = 'Rio de Janeiro';
 // let cityData = allCities['data']['allCities']['edges'].filter(item => item.node.name === city);
 // let cityCoordinates = JSON.parse(cityData[0]['node']['geoCenter'])['coordinates'];
-// var center = {lat: cityCoordinates[0], lng: cityCoordinates[1]};
+// let center = {lat: cityCoordinates[0], lng: cityCoordinates[1]};
 
+let map, heatmap;
 
-// console.log(googleKey)
-
-var map, heatmap;
-
-function initMap() {
-  
-  // Get coordinates of selected city
-  let city = 'Rio de Janeiro';
-  let cityCoordinates = allCities.filter(item => item.name === city);  
-  var center = {lat: cityCoordinates[0]['coordinates'][0], lng: cityCoordinates[0]['coordinates'][1]};
+function initMap(messengerLocations, lat, lng, data) {
   
   // Add Marker Cluster Map
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center
+    zoom: 11,
+    center: {lat, lng}
   });
   
-  var label = 'mensageiro';
+  let label = 'mensageiro';
   
-  var markers = locations['data']['closestDrivers']['drivers'].map(function(location, i) {
+  let markers = messengerLocations.map(function(location, i) {
     return new google.maps.Marker({
-      position: location,
+      position: {lat: location['lat'], lng: location['lng']},
       label
     });
   });
   
-  var markerCluster = new MarkerClusterer(map, markers,
+  let markerCluster = new MarkerClusterer(map, markers,
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
     
     
@@ -43,11 +35,13 @@ function initMap() {
   });
 
   function getPoints() {
-    return locations['data']['closestDrivers']['drivers'].map(l => new google.maps.LatLng(l.lat, l.lng));
+    return messengerLocations.map(l => new google.maps.LatLng(l.lat, l.lng));
   }
 
   // Set radius to Heatmap
   heatmap.set('radius', 20);
+
+  insertAmountInformation(data);
 }
 
 
@@ -56,7 +50,7 @@ function toggleHeatmap() {
 }
 
 function changeGradient() {
-  var gradient = [
+  let gradient = [
     'rgba(0, 255, 255, 0)',
     'rgba(0, 255, 255, 1)',
     'rgba(0, 191, 255, 1)',
