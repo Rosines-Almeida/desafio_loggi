@@ -28,10 +28,10 @@
     <h1 class="splash"><img src="assets/loggi-logo.jpg" style="height:300px;"></h1>
 
       <aside class =  'd-flex flex-column align-content-around'> 
-        <a href='' class=" m-3  icon icon-home-house-streamline" style="text-decoration: none" > </a> 
-        <a href=''  class="m-3 icon icon-star"style="text-decoration: none"></a> 
-        <a href='' class=" m-3 icon icon-info" style="text-decoration: none"></a>  
-        <a href='' class="ml-auto mr-4 bd-highlight icon-sign-out"style="text-decoration: none"></a> 
+        <a href='#' class=" m-3  icon icon-home-house-streamline" style="text-decoration: none" > </a> 
+        <a href='#'  class="m-3 icon icon-star"style="text-decoration: none"></a> 
+        <a href='#' class=" m-3 icon icon-info" style="text-decoration: none"></a>  
+        <a href='#' class="ml-auto mr-4 bd-highlight icon-sign-out"style="text-decoration: none"></a> 
       </aside>
    
       <main>
@@ -39,7 +39,6 @@
         <div class="menu-home ml-5">
             <p class="menu-title font-weight-light r">Procure Mensageiros</p>
             <select class="custom-select ml-5" id="city">
-              <!-- <option selected>Selecione sua Cidade</option> -->
               <option selected value="sp">São Paulo</option>
               <option value="rj">Rio de Janeiro</option>
               <option value="cwb">Curitiba</option>
@@ -49,12 +48,12 @@
             </select>
         
             <select class="custom-select ml-5" id="region">
-              <option selected>Selecione a Região da Cidade</option>
-              <option value="">Zona Central</option>
-              <option value="rj">Zona Norte</option>
-              <option value="rj">Zona Leste</option>
-              <option value="rj">Zona Sul</option>
-              <option value="rj">Zona Oeste</option>
+              <option selected value="nenhuma">Selecione a Região da Cidade</option>
+              <option value="central">Zona Central</option>
+              <option value="norte">Zona Norte</option>
+              <option value="leste">Zona Leste</option>
+              <option value="sul">Zona Sul</option>
+              <option value="oeste">Zona Oeste</option>
             </select>
           
           <button class="ml-5 btn btn-outline-primary btn-fav" type="button"> <i class="far fa-heart"></i></button>
@@ -85,9 +84,10 @@
           </div>
         </div>
 
-        <!-- <div class="menu-favs ml-5">
-          <p class="menu-title font-weight-light r">Favoritos</p>
-        </div> -->
+        <div class="menu-favs ml-5">
+          <p class="menu-title font-weight-light">Favoritos</p>
+          <p class="font-weight-light">São Paulo:</p>
+        </div>
 
         <div class="delivery ml-5">
           <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery" data-toggle='modal' data-target='#modalPedido'>Novo Pedido</button>
@@ -135,6 +135,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/zones.js"></script>
     <script src="js/index.js"></script>    
     <!-- Map scripts -->
     <script src="js/data.js"></script>
