@@ -8,6 +8,8 @@
     <title>Loggi Mensageiros</title>
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/menu.css">
+ 
+     
     <link href = "https://file.myfontastic.com/YDkD6NTx8oseVinSE6UHLL/icons.css" rel = "stylesheet">
     <link href="https://file.myfontastic.com/TL7SPECgWqKUURXn2NDXqK/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -47,12 +49,12 @@
             </select>
         
             <select class="custom-select ml-5" id="region">
-              <option selected>Selecione a Região da Cidade</option>
-              <option value="">Zona Central</option>
-              <option value="rj">Zona Norte</option>
-              <option value="rj">Zona Leste</option>
-              <option value="rj">Zona Sul</option>
-              <option value="rj">Zona Oeste</option>
+              <option selected value="nenhuma">Selecione a Região da Cidade</option>
+              <option value="central">Zona Central</option>
+              <option value="norte">Zona Norte</option>
+              <option value="leste">Zona Leste</option>
+              <option value="sul">Zona Sul</option>
+              <option value="oeste">Zona Oeste</option>
             </select>
           
           <button class="ml-5 btn btn-outline-primary btn-fav" type="button"><i class="icon-star"></i></button>
@@ -97,7 +99,7 @@
              <div class="modal-content">
               <div class="modal-header">
                 <img src="assets/loggi-logo-small.png" height="30px"> 
-                <button type="button" class="close color-one" data-dismiss="modal" aria-label="Close">   <i class="  "> </i> 
+                <button type="button" class="close color-one" data-dismiss="modal" aria-label="Close"> <i class= "icon-times-circle"> </i> 
               
              
            </button>
@@ -134,6 +136,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/zones.js"></script>
     <script src="js/index.js"></script>    
     <!-- Map scripts -->
     <script src="js/data.js"></script>
