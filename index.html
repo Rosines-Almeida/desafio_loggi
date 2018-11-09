@@ -35,32 +35,26 @@
       <main>
 
         <div class="menu-home ml-5">
-          <div class="dropdown">
             <p class="menu-title font-weight-light r">Procure Mensageiros</p>
-            <button class="ml-5 btn btn-outline-primary dropdown-toggle mt-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Cidade
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">São Paulo</a>
-              <a class="dropdown-item" href="#">Rio de Janeiro</a>
-              <a class="dropdown-item" href="#">Curitiba</a>
-              <a class="dropdown-item" href="#">Porto Alegre</a>
-              <a class="dropdown-item" href="#">Brasília</a>
-              <a class="dropdown-item" href="#">São José dos Campos</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="ml-5 btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Zona
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Zona Central</a>
-              <a class="dropdown-item" href="#">Zona Norte</a>
-              <a class="dropdown-item" href="#">Zona Leste</a>
-              <a class="dropdown-item" href="#">Zona Sul</a>
-              <a class="dropdown-item" href="#">Zona Oeste</a>
-            </div>
-          </div>
+            <select class="custom-select ml-5" id="city">
+              <option selected>Seleciona sua Cidade</option>
+              <option value="sp">São Paulo</option>
+              <option value="rj">Rio de Janeiro</option>
+              <option value="cwb">Curitiba</option>
+              <option value="poa">Porto Alegre</option>
+              <option value="bra">Brasília</option>
+              <option value="sjc">São José dos Campos</option>
+            </select>
+        
+            <select class="custom-select ml-5" id="region">
+              <option selected>Seleciona a Região da Cidade</option>
+              <option value="">Zona Central</option>
+              <option value="rj">Zona Norte</option>
+              <option value="rj">Zona Leste</option>
+              <option value="rj">Zona Sul</option>
+              <option value="rj">Zona Oeste</option>
+            </select>
+          
           <button class="ml-5 btn btn-outline-primary btn-fav" type="button"><i class="icon-star"></i></button>
           <hr />
           <div class="ml-5 numbers-section">
