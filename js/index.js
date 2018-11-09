@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('<script></script>').attr('src', `https://maps.googleapis.com/maps/api/js?key=${googleKey}&libraries=visualization&callback=initMap`)
+	$('<script></script>').attr('src', `https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFO9LIL-H7SvL8XI52rtIgc34H9JN1Kg&libraries=visualization&callback=initMap`)
 
 	// $('.splash').delay('2000').fadeOut('slow');
 	
@@ -65,5 +65,5 @@ let queryDrivers = `
 
 requestLoggiAPI(queryDrivers)
 	.then(response => response.json())
-	.then(data => console.log(data));
+	.then(data => console.log(data.closestDrivers.drivers));
 
