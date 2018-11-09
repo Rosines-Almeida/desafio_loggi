@@ -8,13 +8,10 @@
     <title>Loggi</title>
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/menu.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href = "https://file.myfontastic.com/YDkD6NTx8oseVinSE6UHLL/icons.css" rel = "stylesheet">
     <link href="https://file.myfontastic.com/TL7SPECgWqKUURXn2NDXqK/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
       <nav class="navbar navbar-light bg-light">
@@ -38,32 +35,26 @@
       <main>
 
         <div class="menu-home ml-5">
-          <div class="dropdown">
             <p class="menu-title font-weight-light r">Procure Mensageiros</p>
-            <button class="ml-5 btn btn-outline-primary dropdown-toggle mt-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Cidade
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <option selected id="sp" href="#">São Paulo</option>
+            <select class="custom-select ml-5" id="city">
+              <option selected>Seleciona sua Cidade</option>
+              <option value="sp">São Paulo</option>
               <option value="rj">Rio de Janeiro</option>
               <option value="cwb">Curitiba</option>
               <option value="poa">Porto Alegre</option>
               <option value="bra">Brasília</option>
               <option value="sjc">São José dos Campos</option>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="ml-5 btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Zona
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <option selected>Zona Central</option>
+            </select>
+        
+            <select class="custom-select ml-5" id="region">
+              <option selected>Seleciona a Região da Cidade</option>
+              <option value="">Zona Central</option>
               <option value="rj">Zona Norte</option>
               <option value="rj">Zona Leste</option>
               <option value="rj">Zona Sul</option>
               <option value="rj">Zona Oeste</option>
-            </div>
-          </div>
+            </select>
+          
           <button class="ml-5 btn btn-outline-primary btn-fav" type="button"><i class="icon-star"></i></button>
           <hr />
           <div class="ml-5 numbers-section">
@@ -84,17 +75,35 @@
         </div>
 
         <div class="delivery ml-5">
-          <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery">Novo Pedido</button>
+          <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery" data-toggle='modal' data-target='#modalPedido'">Novo Pedido</button>
         </div>
 
       </main>
-
-    </div>
-
+      <div class="modal" tabindex="-1" role="dialog" id="modalPedido">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header color-one">
+                 <h5 class="modal-title"> </h5>
+                 <img src=" " width="40px">
+              </div>
+              <div class="modal-body">
+                 <p id='descricao'> </p>
+              </div>
+              <div class="modal-footer">
+                 <button type="button color-two" class="btn color-two" data-dismiss="modal"> <i class="fas fa-times"></i></button>
+              </div>
+           </div>
+        </div>
+     </div> 
 
     <map></map>
+  </div>
+   
 
-  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
     <script src="apikey.js"></script>
     <script src="js/index.js"></script>
   </body>
