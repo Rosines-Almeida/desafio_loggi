@@ -20,7 +20,7 @@ function requestLoggiAPI(query) {
     return fetch(`https://www.loggi.com/graphql`, options);
   }
 
-let queryDB = `
+let queryDrivers = `
 		{
   	closestDrivers(productType: 0, transportType: "1", lat: -23.6, lng: -46.7, radius: 12.0, limit: 500) {
     	driversCount
@@ -35,6 +35,8 @@ let queryDB = `
 	} 
 	`;
 
-requestLoggiAPI(queryDB)
+
+requestLoggiAPI(queryDrivers)
 	.then(response => response.json())
 	.then(data => console.log(data));
+
