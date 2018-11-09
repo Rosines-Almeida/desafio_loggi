@@ -1,31 +1,17 @@
 $(document).ready(function(){
 
-	$('.splash').delay('2000').fadeOut('slow');
+	$('.splash').delay('4000').fadeOut('slow');
 
 	$('.menu-favs').hide();
 	$('.icon-star').on('click', showFavs);
 	$('.icon-home-house-streamline').on('click', showHome);
 	
 	$(".btn-fav").click(function() {
-		let getCity = JSON.parse(localStorage.getItem("city"));
 		let getReg = JSON.parse(localStorage.getItem("region"));
-		// let city = $("#city option:selected").text();
 		let reg = $("#region option:selected").text();
-		console.log(city);
 		console.log(reg);
+		console.log(getReg)
 		
-		// if (getCity) {
-		// 	let indexCity = getCity.findIndex( value => value === city );
-		// 	if ( indexCity >= 0 ){
-		// 		newFavsCity = [ ...getCity];
-		// 		newFavsCity.splice(indexCity, 1);
-		// 	} else{
-		// 		newFavsCity = [ ...getCity, city ];
-		// 	}
-		// } else {
-		// 	newFavsCity = [ city ];
-		// }
-
 		if (getReg) {
 			let indexReg = getReg.findIndex( value => value === reg );
 			if ( indexReg >= 0 ){
@@ -37,14 +23,13 @@ $(document).ready(function(){
 		} else {
 			newFavsReg = [ reg ];
 		}
-		// let favObj = [ {favCity: getCity, reg: getReg} ]
 
-		let favObj = [ {city: newFavsCity, newFavsReg} ];
-		console.log(favObj)
-		// newFavObj = [favObj];
-		localStorage.setItem("Favs", JSON.stringify(favObj));
+		localStorage.setItem("region", JSON.stringify(newFavsReg));
 
 	})
+
+	let getFavs = JSON.parse(localStorage.getItem("region"));
+	console.log(getFavs);
 
 	function clearHome() {
 		$('.menu-home').hide();
@@ -62,6 +47,10 @@ $(document).ready(function(){
 	function showFavs() {
 		$('.menu-favs').show();
 		clearHome();
+		for (var regs in getFavs) {
+			let regFavs = getFavs[regs];
+			$(".fav-reg").append(`<p>${regFavs}</p>`);
+		}
 	}
 
 	$('#city').val('sp');
