@@ -25,7 +25,7 @@
 
   <!--   <h1 class="splash"><img src="assets/loggi-logo.jpg" style="height:300px;"></h1> -->
 
-      <aside class ='d-flex flex-column align-content-around'> 
+      <aside class =  'd-flex flex-column align-content-around'> 
         <a href='' class=" m-3  icon icon-home-house-streamline"> </a> 
         <a href=''  class="m-3 icon icon-star"></a> 
         <a href='' class=" m-3 icon icon-info"></a>  
@@ -77,25 +77,25 @@
         <div class="delivery ml-5">
           <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery" data-toggle='modal' data-target='#modalPedido'>Novo Pedido</button>
         </div>
-
+        <div class="modal" tabindex="-1" role="dialog" id="modalPedido">
+          <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                <div class="modal-header color-one">
+                   <h5 class="modal-title"> </h5>
+                   <img src=" " width="40px">
+                </div>
+                <div class="modal-body">
+                   <p id='descricao'> Faça seu login <a href = 'https://www.loggi.com/corp/app/'> aqui</a> </p>
+                
+                   <button type="button  " class="btn" data-dismiss="modal"> <i class="icon-cancel-circled"></i> </button>
+             </div>
+             </div>
+          </div>
+       </div> 
+  
       </main>
-      <div class="modal" tabindex="-1" role="dialog" id="modalPedido">
-        <div class="modal-dialog" role="document">
-           <div class="modal-content">
-              <div class="modal-header color-one">
-                 <h5 class="modal-title"> </h5>
-                 <img src=" " width="40px">
-              </div>
-              <div class="modal-body">
-                 <p id='descricao'> Faça seu login <a href = 'https://www.loggi.com/corp/app/'> aqui</a> </p>
-              
-                 <button type="button  " class="btn" data-dismiss="modal"> <i class="icon-cancel-circled"></i> </button>
-           </div>
-           </div>
-        </div>
-     </div> 
 
-    <map >
+    <map class ='grid' >
       <div id="floating-panel">
         <button onclick="toggleHeatmap()">Habilitar/Desabilitar Mapa de Calor</button>
         <button onclick="changeGradient()">Alterar gradiente</button>

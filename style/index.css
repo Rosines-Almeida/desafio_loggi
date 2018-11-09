@@ -36,7 +36,7 @@ body{
   grid-template-areas:  
                         "aside content map  "
                         "aside content map" ;
-  grid-gap: 10px;
+  grid-gap: 0px;
  }
 
 aside {
@@ -71,3 +71,4 @@ map{
 .color-one{
   background-color: #29b8ff; 
 }
+ 
