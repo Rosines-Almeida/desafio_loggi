@@ -1,3 +1,7 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .splash {
   background-color: #29b8ff;
   position: fixed;
@@ -21,6 +25,10 @@
   font-size: 20px;
 }
 
+.btn-delivery {
+  width: 300px;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows:  400px 200px ;
@@ -31,25 +39,35 @@
   grid-gap: 10px;
  }
 
-  aside {
-    grid-area: aside;
-  }
+aside {
+  grid-area: aside;
+}
+
+main {
+  border-left: 1px solid rgb(202, 201, 201);
+  border-right: 1px solid rgb(202, 201, 201);
+  grid-area: content;
   
-  main {
-    border-left: 1px solid rgb(202, 201, 201);
-    border-right: 1px solid rgb(202, 201, 201);
-    grid-area: content;
-   
-  }
-  
-  map{
-    background-color: 1px solid gray;
-    grid-area: map;
-  
-  }
-   
-  .icon{
-    color: black;
-    font-size: 30px;
-    color: #29b8ff;
-  }
+}
+
+map{
+  background-color: 1px solid gray;
+  grid-area: map;
+
+}
+ 
+.icon-sign-out {
+  font-size: 30px;
+  color: #29b8ff;
+  margin-top: auto;
+}
+ 
+.icon{
+  color: #000000;
+  font-size: 30px;
+  color: #29b8ff;
+}
+ 
+.color-one{
+  background-color: #29b8ff; 
+}

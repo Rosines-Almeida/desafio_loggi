@@ -9,16 +9,25 @@
 
 .menu-title {
   font-size: 30px;
+  color: #29b8ff;
 }
 
 .numbers-section hr {
   color: grey;
   height: 2px;
-  width: 60%;
+  width: 70%;
 }
 
 .numbers-section {
   font-size: 20px;
+}
+
+#city {
+  width: 300px;
+}
+
+#region {
+  width: 300px;
 }
 
 hr {
