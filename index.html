@@ -57,22 +57,35 @@
           
           <button class="ml-5 btn btn-outline-primary btn-fav" type="button"><i class="icon-star"></i></button>
           <hr />
-          <div class="ml-5 numbers-section">
-            <div class="total-section font-weight-light">
-              <p>Total</p>
-              <p class="total-number"></p>
+          <div class="ml-5 numbers-section d-flex flex-row">
+            <div class="title-section d-flex flex-column">
+              <div class="total-title-section d-flex flex-row font-weight-light">
+                <p class="mr-5 ">Total</p>
+              </div>
+              <div class="available-title-section d-flex flex-row font-weight-light">
+                <p class="mr-5 ">Disponíveis</p>
+              </div>
+              <div class="unavailable-title-section d-flex flex-row font-weight-light">
+                <p class="mr-5 ">Indisponíveis</p>
+              </div>
             </div>
-            <hr />
-            <div class="available-section font-weight-light">
-              <p>Disponíveis</p>
-              <p class="available-number"></p>
-            </div>
-            <div class="unavailable-section font-weight-light">
-              <p>Indisponíveis</p>
-              <p class="unavailable-number"></p>
+            <div class="number-section ml-5 d-flex flex-column">
+              <div class="total-number-section d-flex flex-row font-weight-light">
+                <p class="total-number"></p>
+              </div>
+              <div class="available-number-section d-flex flex-row font-weight-light">
+                <p class="available-number"></p>
+              </div>
+              <div class="unavailable-number-section d-flex flex-row font-weight-light">
+                <p class="unavailable-number"></p>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- <div class="menu-favs ml-5">
+          <p class="menu-title font-weight-light r">Favoritos</p>
+        </div> -->
 
         <div class="delivery ml-5">
           <button class="ml-5 font-weight-light btn btn-outline-primary btn-delivery" data-toggle='modal' data-target='#modalPedido'>Novo Pedido</button>

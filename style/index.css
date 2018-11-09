@@ -52,10 +52,10 @@ main {
 .color-map{
   background-color: #e4e4e4;
 }
+
 map{
   background-color: 1px solid e4e4e4;
   grid-area: map;
-
 }
  
 .icon-sign-out {
