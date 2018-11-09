@@ -3,26 +3,42 @@ $(document).ready(function(){
 	// $('.splash').delay('2000').fadeOut('slow');
 	
 	$(".btn-fav").click(function() {
-		// $("#more").classList.toggle("liked");
 		let getCity = JSON.parse(localStorage.getItem("city"));
-		// let getReg = JSON.parse(localStorage.getItem("region"));
-		let city = "São Paulo";
-		// $("#yourid option:selected").text();
-		// let reg = $(icon).attr("id");
+		let getReg = JSON.parse(localStorage.getItem("region"));
+		let city = $("#city option:selected").text();
+		let reg = $("#region option:selected").text();
 		console.log(city);
-
+		console.log(reg);
+		let favObj = [ {city: getCity, reg: getReg} ]
+		
 		if (getCity) {
-			let index = getCity.findIndex( value => value === city );
-			if ( index >= 0 ){
-				newFavs = [ ...getCity];
-				newFavs.splice(index, 1);
+			let indexCity = getCity.findIndex( value => value === city );
+			if ( indexCity >= 0 ){
+				newFavsCity = [ ...getCity];
+				newFavsCity.splice(indexCity, 1);
 			} else{
-				newFavs = [ ...getCity, city ];
+				newFavsCity = [ ...getCity, city ];
 			}
 		} else {
-			newFavs = [ city ];
+			newFavsCity = [ city ];
 		}
-		localStorage.setItem("city", JSON.stringify(newFavs));
+
+
+		if (getReg) {
+			let indexReg = getReg.findIndex( value => value === reg );
+			if ( indexReg >= 0 ){
+				newFavsReg = [ ...getReg];
+				newFavsReg.splice(indexReg, 1);
+			} else{
+				newFavsReg = [ ...getReg, reg ];
+			}
+		} else {
+			newFavsReg = [ reg ];
+		}
+		newFavObj = [favObj]
+		localStorage.setItem("city", JSON.stringify(newFavsCity));
+		localStorage.setItem("region", JSON.stringify(newFavsReg));
+
 
 	})
 
