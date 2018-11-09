@@ -28,6 +28,19 @@ $(document).ready(function(){
 
 	})
 
+	requestLoggiAPI(queryDrivers)
+	.then(response => response.json())
+	.then(data => console.log(['data']['closestDrivers']['driversCount']));
+
+	const totalDrivers = locations['data']['closestDrivers']['driversCount'];
+	$('.total-number').html(totalDrivers);
+
+	const availableDrivers = locations['data']['closestDrivers']['readyDriversCount'];
+	$('.available-number').html(availableDrivers);
+
+	const unavailableDrivers = locations['data']['closestDrivers']['busyDriversCount'];
+	$('.unavailable-number').html(unavailableDrivers);
+
 });
 
 function requestLoggiAPI(query) {
@@ -63,7 +76,8 @@ let queryDrivers = `
 	`;
 
 
-requestLoggiAPI(queryDrivers)
-	.then(response => response.json())
-	.then(data => console.log(data.closestDrivers.drivers));
+// requestLoggiAPI(queryDrivers)
+// 	.then(response => response.json())
+// 	.then(data => console.log(['data']['closestDrivers']['driversCount']));
+	
 

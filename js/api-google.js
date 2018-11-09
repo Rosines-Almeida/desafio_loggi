@@ -14,7 +14,6 @@ function initMap() {
   // Get coordinates of selected city
   let city = 'Rio de Janeiro';
   let cityCoordinates = allCities.filter(item => item.name === city);  
-  console.log(allCities);
   var center = {lat: cityCoordinates[0]['coordinates'][0], lng: cityCoordinates[0]['coordinates'][1]};
   
   // Add Marker Cluster Map
